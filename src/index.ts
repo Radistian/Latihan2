@@ -124,9 +124,8 @@ class Rabbit extends Animal{
     this.isMammal = true
   }
 
-  eat(){
-    console.log(`${this.name} yang berumur ${this.age}, sedang makan!`);
-    this.isMammal = true
+  eat():string{  
+    return `${this.name} yang berumur ${this.age}, sedang makan!`
   }
 }
 
@@ -139,13 +138,12 @@ class Eagle extends Animal{
     this.speed = 220
   }
 
-  fly(){
-    console.log(`${this.name} yang berumur ${this.age} sedang terbang!`);
+  fly():string{
+   return `${this.name} yang berumur ${this.age} sedang terbang!`
   }
 
   run(){
-    console.log(`${this.name} Berlari dengan kecapatan ${this.speed} km`);
-    this.isMammal = false
+    return `${this.name} Berlari dengan kecapatan ${this.speed} km`
   }
 }
 
@@ -155,12 +153,12 @@ class EagleRun extends Eagle{
   constructor(name:string,speed:number){
     super(name,speed)
   }
-  fly(){
-    console.log(`${this.name} yang berumur ${this.age} sedang terbang!`);
+  fly():string{
+    return `${this.name} yang berumur ${this.age} sedang terbang!`
   }
 
   runEagle(){
-    console.log(`${this.name} Berlari dengan kecapatan ${this.speed} km`);
+    return super.run()
   }
 }
 
